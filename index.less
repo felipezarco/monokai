@@ -91,8 +91,6 @@ atom-text-editor {
       color: @syntax-text-color !important;
     }
 
-
-
     // COMMENT
     .syntax--comment {
       color: #A300A3;
@@ -104,6 +102,10 @@ atom-text-editor {
     }
 
     // CONSTANTS
+    .syntax--storage, .syntax--modifier {
+      font-weight: bold;
+    }
+
     .syntax--constant {
       font-weight: bold;
     }
@@ -292,17 +294,26 @@ atom-text-editor {
   color: #33FF00 !important;
 }
 
+.git-line-removed {
+  color: #FF0000 !important;
+}
+
+.git-line-modified {
+  color: #00FF66 !important;
+}
+
 atom-text-editor .gutter .line-number.git-line-added {
   border-left: 2px solid #33FF00;
   padding-left: calc(0.5em - 2px);
 }
 
-.git-line-removed {
-  color: #FF0000 !important;
-}
-
 atom-text-editor .gutter .line-number.git-line-removed {
   border-left: 2px solid #FF0000;
+  padding-left: calc(0.5em - 2px);
+}
+
+atom-text-editor .gutter .line-number.git-line-modified {
+  border-left: 2px solid #00FF66;
   padding-left: calc(0.5em - 2px);
 }
 
